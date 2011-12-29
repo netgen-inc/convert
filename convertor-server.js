@@ -17,7 +17,7 @@ mysql.password = settings.mysql.password;
 mysql.database = settings.mysql.database;
 mysql.query("set names utf8");
 
-var hook = require('../event/lib/devent').createDEvent(settings.hook_io.name);
+var hook = require('event').createDEvent(settings.hook_io.name);
 /**
 var Hook=require('hook.io').Hook;
 var hook=new Hook({

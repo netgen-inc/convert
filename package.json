@@ -6,9 +6,7 @@
 	"dependencies": {        
 		"express": ">= 2.5.2",        
 		"underscore": ">= 1.2.3",        
-		"optimist": ">= 0.3.0",        
-		"redis": ">= 0.7.1",        
-		"devent": ">= 0.1.0",
+		"mysql": ">= 0.9.0",
 		"devent": "https://github.com/netgen-inc/devent/tarball/master",        
 		"queuer": "https://github.com/netgen-inc/queuer/tarball/master"  
 	},    
@@ -17,6 +15,6 @@
 		"start": "node convertor-server.js"    
 	},    
 	"engines": {        
-		"node": "0.6.x"    
+		"node": ">=0.4.x"    
 	}
 }
