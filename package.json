@@ -14,7 +14,7 @@
 	},    
 	"main": "index",    
 	"scripts": {        
-		"start": "node convertor.js"    
+		"start": "node convertor-server.js"    
 	},    
 	"engines": {        
 		"node": "0.6.x"    
