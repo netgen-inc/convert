@@ -27,7 +27,7 @@ var hook=new Hook({
 });
 **/
 
-var queue=require('../queuer/lib/queue');
+var queue = require('queuer');
 var deq = queue.getQueue(settings.queue.host,settings.queue.deqname);
 var enq = queue.getQueue(settings.queue.host,settings.queue.enqname);
 

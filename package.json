@@ -1,0 +1,22 @@
+{    
+	"name": "convert",
+	"version": "0.1.0",    
+	"description": "Convertor Weibo Content Service",    
+	"author": "cobin <cobin@21cn.com>",    
+	"dependencies": {        
+		"express": ">= 2.5.2",        
+		"underscore": ">= 1.2.3",        
+		"optimist": ">= 0.3.0",        
+		"redis": ">= 0.7.1",        
+		"devent": ">= 0.1.0",
+		"devent": "https://github.com/netgen-inc/devent/tarball/master",        
+		"queuer": "https://github.com/netgen-inc/queuer/tarball/master"  
+	},    
+	"main": "index",    
+	"scripts": {        
+		"start": "node convertor.js"    
+	},    
+	"engines": {        
+		"node": "0.6.x"    
+	}
+}
