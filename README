@@ -1,1 +1,6 @@
-第一次处理，比较不容易
+服务启动说明：
+
+	修改etc下的配置文件，把setting.json-dest修改为setting.json.
+	打开setting.json文件修改里面的服务地址即可
+	
+	启动服务 node convertor-server.js
