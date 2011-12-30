@@ -6,6 +6,7 @@
 	"dependencies": {        
 		"express": ">= 2.5.2",        
 		"underscore": ">= 1.2.3", 
+		"request":">=2.2.0",  
 		"traverse":">=0.5.2",       
 		"mysql": ">= 0.9.5",
 		"devent": "https://github.com/netgen-inc/devent/tarball/master",        

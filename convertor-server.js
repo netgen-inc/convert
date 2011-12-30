@@ -24,7 +24,7 @@ mysqlw.password = settings.mysqlwrite.password;
 mysqlw.database = settings.mysqlwrite.database;
 mysqlw.query("set names utf8");
 
-var hook = require('devent').createDEvent(settings.devent.name);
+var devent = require('devent').createDEvent(settings.devent.name);
 /**
 var Hook=require('hook.io').Hook;
 var hook=new Hook({
@@ -42,11 +42,11 @@ cqueue.setDeQueue(deq);
 cqueue.setEnQueue(enq);
 cqueue.setMysqlRead(mysqlr);
 cqueue.setMysqlWrite(mysqlw);
-cqueue.setHook(hook);
+cqueue.setDEvent(devent);
 cqueue.setLogger(_logger);
 
 hook.on('queued', function(msg){
-  if(queue==settings.hook_io.name){
+  if(queue==settings.devent.name){
   	cqueue.dequeue();
   }
 });
