@@ -5,7 +5,8 @@
 	"author": "cobin <cobin@21cn.com>",    
 	"dependencies": {        
 		"express": ">= 2.5.2",        
-		"underscore": ">= 1.2.3",        
+		"underscore": ">= 1.2.3", 
+		"traverse":">=0.5.2",       
 		"mysql": ">= 0.9.5",
 		"devent": "https://github.com/netgen-inc/devent/tarball/master",        
 		"queuer": "https://github.com/netgen-inc/queuer/tarball/master"  
