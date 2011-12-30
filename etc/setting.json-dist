@@ -10,7 +10,7 @@
   	"username" : "stockradar",
     "password" : "stockradar",
     "database": "stock_radar" 
-  }£¬
+  },
   "mysqlwrite" : {
   	"host":"172.16.39.237",
   	"port":3306,  	
