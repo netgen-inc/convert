@@ -1,16 +1,18 @@
 {	
-  "hook_io" : {
-    "host" : "127.0.0.1",
-    "port" : 5000,
-    "name" : "article_content"
-   },
   "queue" : {
     "host" : "http://127.0.0.1:3000/queue",
     "deqname":"article_content",
     "enqname":"weibo_send"
   },
-  "mysql" : {
-  	"host":"172.16.33.237",
+  "mysqlread" : {
+  	"host":"172.16.39.237",
+  	"port":3306,  	
+  	"username" : "stockradar",
+    "password" : "stockradar",
+    "database": "stock_radar" 
+  }£¬
+  "mysqlwrite" : {
+  	"host":"172.16.39.237",
   	"port":3306,  	
   	"username" : "stockradar",
     "password" : "stockradar",

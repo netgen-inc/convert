@@ -9,13 +9,20 @@ var _logger = logger(__dirname + '/' + settings.log.file);
 
 var cqueue = require('./lib/convertqueue');
 
-var MysqlClient = require('mysql').Client, mysql = new MysqlClient();
-mysql.host = settings.mysql.host;
-mysql.port = settings.mysql.port;
-mysql.user = settings.mysql.username;
-mysql.password = settings.mysql.password;
-mysql.database = settings.mysql.database;
-mysql.query("set names utf8");
+var MysqlClient = require('mysql').Client, mysqlr = new MysqlClient(),mysqlw = new MysqlClient();
+mysqlr.host = settings.mysqlread.host;
+mysqlr.port = settings.mysqlread.port;
+mysqlr.user = settings.mysqlread.username;
+mysqlr.password = settings.mysqlread.password;
+mysqlr.database = settings.mysqlread.database;
+mysqlr.query("set names utf8");
+
+mysqlw.host = settings.mysqlwrite.host;
+mysqlw.port = settings.mysqlwrite.port;
+mysqlw.user = settings.mysqlwrite.username;
+mysqlw.password = settings.mysqlwrite.password;
+mysqlw.database = settings.mysqlwrite.database;
+mysqlw.query("set names utf8");
 
 var hook = require('devent').createDEvent(settings.hook_io.name);
 /**
@@ -33,7 +40,8 @@ var enq = queue.getQueue(settings.queue.host,settings.queue.enqname);
 
 cqueue.setDeQueue(deq);
 cqueue.setEnQueue(enq);
-cqueue.setMysql(mysql);
+cqueue.setMysqlRead(mysqlr);
+cqueue.setMysqlWrite(mysqlw);
 cqueue.setHook(hook);
 cqueue.setLogger(_logger);
 
