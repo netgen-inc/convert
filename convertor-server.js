@@ -45,7 +45,7 @@ cqueue.setMysqlWrite(mysqlw);
 cqueue.setDEvent(devent);
 cqueue.setLogger(_logger);
 
-hook.on('queued', function(msg){
+devent.on('queued', function(msg){
   if(queue==settings.devent.name){
   	cqueue.dequeue();
   }
