@@ -25,14 +25,6 @@ mysqlw.database = settings.mysqlwrite.database;
 mysqlw.query("set names utf8");
 
 var devent = require('devent').createDEvent(settings.devent.name);
-/**
-var Hook=require('hook.io').Hook;
-var hook=new Hook({
-	name:settings.hook_io.name,
-	'hook-host':settings.hook_io.host,
-	debug:true
-});
-**/
 
 var queue = require('queuer');
 var deq = queue.getQueue(settings.queue.host,settings.queue.deqname);
@@ -51,15 +43,5 @@ devent.on('queued', function(msg){
   }
 });
 
-/**
-hook.on('hook::ready',function(){
-	hook.on('*::queued',function(queue){
-		if(queue==settings.hook_io.name){
-			cqueue.dequeue();
-		}
-	});
-});
-**/
 cqueue.run();
 
-//hook.connect();
