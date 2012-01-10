@@ -12,14 +12,14 @@ var cqueue = require('./lib/convertqueue');
 var MysqlClient = require('mysql').Client, mysqlr = new MysqlClient(),mysqlw = new MysqlClient();
 mysqlr.host = settings.mysqlread.host;
 mysqlr.port = settings.mysqlread.port;
-mysqlr.user = settings.mysqlread.username;
+mysqlr.user = settings.mysqlread.user;
 mysqlr.password = settings.mysqlread.password;
 mysqlr.database = settings.mysqlread.database;
 mysqlr.query("set names utf8");
 
 mysqlw.host = settings.mysqlwrite.host;
 mysqlw.port = settings.mysqlwrite.port;
-mysqlw.user = settings.mysqlwrite.username;
+mysqlw.user = settings.mysqlwrite.user;
 mysqlw.password = settings.mysqlwrite.password;
 mysqlw.database = settings.mysqlwrite.database;
 mysqlw.query("set names utf8");
