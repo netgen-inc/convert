@@ -73,3 +73,5 @@ convert.on('task-load',taskLoad);
 
 convert.start();
 
+fs.writeFileSync(__dirname + '/convertor.pid', process.pid.toString(), 'ascii');
+
