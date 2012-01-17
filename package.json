@@ -7,14 +7,15 @@
 		"express": ">= 2.5.2",        
 		"underscore": ">= 1.2.3", 
 		"request":">=2.2.0",  
-		"traverse":">=0.5.2",       
+		"traverse":">=0.5.2",
+		"vows":">=0.6.1",     
 		"mysql": ">= 0.9.5",
 		"devent": "https://github.com/netgen-inc/devent/tarball/master",        
 		"queuer": "https://github.com/netgen-inc/queuer/tarball/master"  
 	},    
 	"main": "index",    
 	"scripts": {        
-		"start": "node convertor-server.js"    
+		"start": "node convertor-server2.js"    
 	},    
 	"engines": {        
 		"node": "0.6.x"    
