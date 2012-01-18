@@ -3,21 +3,22 @@
 		"name":"article_content"
 	},
   "queue" : {
-    "host" : "http://127.0.0.1:3000/queue",
+    "host" : "http://172.16.37.237:3000/queue",
     "deqname":"article_content",
-    "enqname":"weibo_send"
+    "enqname":"weibo_send",
+    "enqurl":"mysql://172.16.39.117:3306/webio_send?micro_blog#"
   },
   "mysqlread" : {
-  	"host":"172.16.39.237",
+  	"host":"172.16.37.237",
   	"port":3306,  	
-  	"username" : "stockradar",
+  	"user" : "stockradar",
     "password" : "stockradar",
     "database": "stock_radar" 
   },
   "mysqlwrite" : {
-  	"host":"172.16.39.237",
+  	"host":"172.16.37.237",
   	"port":3306,  	
-  	"username" : "stockradar",
+  	"user" : "stockradar",
     "password" : "stockradar",
     "database": "stock_radar" 
   },
