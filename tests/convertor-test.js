@@ -4,6 +4,14 @@ var cutil = require("../lib/cutil");
 
 var info = require("./info");
 
+String.format = function(src){
+    if (arguments.length == 0) return null;
+    var args = Array.prototype.slice.call(arguments, 1);
+    return src.replace(/\{(\d+)\}/g, function(m, i){
+        return args[i];
+    });
+};
+
 info.initInfo();
 var msg = info.getInfoMsg();
 var msgSucc = info.getInfoSucc();
