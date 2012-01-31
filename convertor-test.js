@@ -53,6 +53,6 @@ convert.on('task-load',taskLoad);
 
 process.argv.forEach(function (val, index, array) {
 	if(index>1){
-		convert.emit({queue:'Test',uri:'http://t.weibo.cn/test?article#'+val});
+		convert.emit('has-task',{queue:'Test',uri:'http://t.weibo.cn/test?article#'+val});
 	}
 });
