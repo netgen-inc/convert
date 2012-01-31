@@ -53,6 +53,26 @@ convert.on('task-load',taskLoad);
 
 process.argv.forEach(function (val, index, array) {
 	if(index>1){
-		convert.emit('has-task',{queue:'Test',uri:'http://t.weibo.cn/test?article#'+val});
+		 var m = val.match(/\d{1,}/g);
+    if(m){
+      if(m.length==1){
+         convert.emit('has-task',{queue:'Test',uri:'http://t.weibo.cn/test?article#'+m[0]});
+       }else{
+         if(m.length>1){
+            var start = parseInt(m[0]);
+            var end = parseInt(m[1]);
+            if(start>end) {
+                var l = start;
+                start = end;
+                end = start;
+            }
+            if(start<1) start = 1;
+            if(end<1) end = 1;
+            for(var i=start;i<end;i++){
+            	convert.emit('has-task',{queue:'Test',uri:'http://t.weibo.cn/test?article#'+i});                
+            }
+         }
+       }
+    }		
 	}
 });
