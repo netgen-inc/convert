@@ -75,3 +75,9 @@ convert.start();
 
 fs.writeFileSync(__dirname + '/convertor.pid', process.pid.toString(), 'ascii');
 
+console.log('Server Started ' + new Date().toLocaleString());
+
+process.on('uncaughtException', function(e){
+    console.log(['uncaughtException:', e]);
+});
+
