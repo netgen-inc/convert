@@ -18,7 +18,7 @@ var enq = queue.getQueue(settings.queue.host,settings.queue.enqname);
 //事件通知有新任务
 devent.on('queued', function(msg){
   if(queue==settings.devent.name){
-  	convert.emit('task-load');
+    convert.emit('task-load');
   }
 });
 
@@ -28,7 +28,7 @@ var taskFinish=function(task){
     devent.emit('task-finished', task);
   }catch(e) {
     _logger.debug(e);
-  }  
+  }
   convert.start();
 };
 
@@ -54,11 +54,11 @@ var microPush=function(taskId){
 //从队列中加载任务
 var taskLoad=function(){
 	//出队列
-	deq.dequeue(function(error,task){	
-		if(task && task!=null && task!=""){				
-    	convert.emit('has-task',task);
+	deq.dequeue(function(error,task){
+		if(task && task!==null && task!==""){
+      convert.emit('has-task',task);
     }else{
-    	convert.start(1);
+      convert.start(1);
     }
 	});
 };
