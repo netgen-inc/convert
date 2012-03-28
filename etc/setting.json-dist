@@ -7,7 +7,9 @@
     "host" : "http://172.16.37.237:3000/queue",
     "deqname":"article_content",
     "enqname":"weibo_send",
-    "enqurl":"mysql://172.16.39.117:3306/webio_send?micro_blog#"
+    "enqname4subject":"article_subject",
+    "enqurl":"mysql://172.16.39.117:3306/webio_send?micro_blog#",
+    "enqurl4subject":"mysql://172.16.39.117:3306/weibo?micro_blog#"
   },
   "mysqlread" : {
   	"host":"172.16.37.237",
