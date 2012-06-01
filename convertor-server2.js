@@ -83,6 +83,10 @@ fs.writeFileSync(__dirname + '/convertor.pid', process.pid.toString(), 'ascii');
 console.log('Server Started ' + new Date().toLocaleString());
 
 process.on('uncaughtException', function(e){
-    console.log(['uncaughtException:', e]);
+	if(e && e.stack){ 
+    console.log(utils.formatDate(),'uncaughtException:', e.stack);
+  }else{
+  	console.log(utils.formatDate(),'uncaughtException:', e);
+  }
 });
 
